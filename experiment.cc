@@ -22,9 +22,9 @@ int main()
         return 1;
     }
 
-    int n = 1000;
-    
-    for (int i = 0; i < 20; i++)
+    int n = 50000;
+    cout << "Mergesort: " << endl;
+    for (int i = 0; i < 10; i++)
     {
         string_vector n_words(all_words.begin(), all_words.begin() + n);
         randomize_list(n_words);
@@ -35,8 +35,8 @@ int main()
         cout << elapsed << endl;
     }
     cout << endl;
-    
-    for (int i = 0; i < 20; i++)
+    cout << "Quicksort: " << endl;
+    for (int i = 0; i < 10; i++)
     {
         string_vector n_words(all_words.begin(), all_words.begin() + n);
         randomize_list(n_words);

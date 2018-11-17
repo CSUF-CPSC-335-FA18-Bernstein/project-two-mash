@@ -25,7 +25,12 @@ using namespace std;
 //-----------------------------------------------------------------------------
 void randomize_list(string_vector & strings)
 {
-    random_shuffle(strings.begin(), strings.end());
+    srand(time(nullptr));
+    for (size_t i = 0; i < strings.size() - 1; i++)
+    {
+        size_t r = rand() % strings.size();
+        swap(strings[i], strings[r]);
+    }
 }
 
 //-----------------------------------------------------------------------------
